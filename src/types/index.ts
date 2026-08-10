@@ -7,3 +7,4 @@ export type {
   EducationItem,
   LanguageItem,
 } from "./profile";
+export type { Technology, TechCategory } from "./technology";
