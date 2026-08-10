@@ -1,16 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { SiFlutter, SiKotlin, SiReact } from "react-icons/si";
-import { profile } from "../data/profile";
-
-const initials = profile.name
-  .split(" ")
-  .filter(Boolean)
-  .slice(0, 2)
-  .map((part) => part[0])
-  .join("")
-  .toUpperCase();
 
 const FLOATING_BADGES = [
   { Icon: SiKotlin, label: "Kotlin", position: "-left-2 top-8 sm:-left-6", delay: 0 },
@@ -24,8 +16,8 @@ const FLOATING_BADGES = [
 ] as const;
 
 /**
- * Ilustración original del Hero: avatar de iniciales con anillo degradado y
- * glow pulsante (estilo "cyberpunk elegante"), rodeado de badges de stack
+ * Ilustración del Hero: avatar 3D dentro de un anillo degradado con glow
+ * pulsante (estilo "cyberpunk elegante"), rodeado de badges de stack
  * flotantes con microinteracción continua.
  */
 export function HeroAvatar() {
@@ -36,11 +28,17 @@ export function HeroAvatar() {
         className="animate-glow-pulse absolute inset-0 rounded-full bg-linear-to-br from-accent-from to-accent-to blur-3xl"
       />
 
-      <div className="relative flex h-full w-full items-center justify-center rounded-full bg-linear-to-br from-accent-from to-accent-to p-[3px] shadow-2xl shadow-accent-glow">
-        <div className="flex h-full w-full items-center justify-center rounded-full bg-surface">
-          <span className="bg-linear-to-br from-accent-from to-accent-to bg-clip-text text-5xl font-bold text-transparent sm:text-6xl">
-            {initials}
-          </span>
+      <div className="relative flex h-full w-full items-center justify-center rounded-full bg-linear-to-br from-accent-from to-accent-to p-[3px] shadow-[0_0_25px_-2px_var(--accent-glow)]">
+        <div className="h-full w-full overflow-hidden rounded-full bg-surface">
+          <Image
+            src="/A_3D_avatar_render_of_a_young_male_software_developer_based.jpg"
+            alt="Wilver Abarca Sánchez - Avatar 3D"
+            width={288}
+            height={288}
+            preload
+            sizes="(min-width: 1024px) 288px, (min-width: 640px) 256px, 224px"
+            className="h-full w-full rounded-full object-cover"
+          />
         </div>
       </div>
 
