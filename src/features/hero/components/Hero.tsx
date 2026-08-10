@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/language/LanguageProvider";
+import { DownloadCvButton } from "@/components/ui/DownloadCvButton";
 import { ContactLinks } from "@/features/contact/components/ContactLinks";
 import { profile } from "../data/profile";
 import { HeroAvatar } from "./HeroAvatar";
@@ -33,6 +34,7 @@ export function Hero() {
           >
             {t.hero.ctaContact}
           </a>
+          <DownloadCvButton />
         </div>
       </div>
 

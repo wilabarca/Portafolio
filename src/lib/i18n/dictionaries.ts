@@ -12,6 +12,7 @@ export interface Dictionary {
   hero: {
     ctaProjects: string;
     ctaContact: string;
+    ctaDownloadCv: string;
   };
   headings: {
     stack: string;
@@ -61,6 +62,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     hero: {
       ctaProjects: "Ver proyectos",
       ctaContact: "Contactarme",
+      ctaDownloadCv: "Descargar CV",
     },
     headings: {
       stack: "Stack Tecnológico",
@@ -109,6 +111,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     hero: {
       ctaProjects: "View projects",
       ctaContact: "Contact me",
+      ctaDownloadCv: "Download CV",
     },
     headings: {
       stack: "Tech Stack",

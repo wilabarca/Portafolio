@@ -17,4 +17,6 @@ export const profile: Profile = {
   linkedinUrl: "https://www.linkedin.com/in/wilver-abarca-sanchez-4749a33a2",
   // Número mexicano (961 667 4443) con lada país (+52), formato requerido por wa.me.
   whatsappUrl: "https://wa.me/529616674443",
+  cvUrl: "/WilverAbarcaCV-1.pdf",
+  cvFileName: "CV_Wilver_Abarca_Sanchez.pdf",
 };

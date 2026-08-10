@@ -18,6 +18,10 @@ export interface Profile {
   linkedinUrl?: string;
   /** Enlace `wa.me` (WhatsApp) con el número en formato internacional. Si no se define, el ícono no se renderiza. */
   whatsappUrl?: string;
+  /** Ruta pública al CV en PDF (p. ej. "/CV_Wilver_Abarca.pdf"). Si no se define, el botón de descarga no se renderiza. */
+  cvUrl?: string;
+  /** Nombre de archivo sugerido al descargar el CV (atributo `download`). */
+  cvFileName?: string;
 }
 
 export interface EducationItem {

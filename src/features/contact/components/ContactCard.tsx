@@ -3,6 +3,7 @@
 import { Send } from "lucide-react";
 import { useLanguage } from "@/components/language/LanguageProvider";
 import { Card } from "@/components/ui/Card";
+import { DownloadCvButton } from "@/components/ui/DownloadCvButton";
 import { cn } from "@/lib/utils";
 import { ContactLinks } from "./ContactLinks";
 
@@ -32,6 +33,7 @@ export function ContactCard({ className }: ContactCardProps) {
         {t.contact.intro}
       </p>
       <ContactLinks className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400" />
+      <DownloadCvButton className="h-10 w-fit px-5 text-xs" />
     </Card>
   );
 }
