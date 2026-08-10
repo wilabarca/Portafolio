@@ -17,11 +17,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const hasLinks = project.links?.repoUrl || project.links?.demoUrl;
 
   return (
-    <Card hover className="flex flex-col gap-4 p-6">
+    <Card hover glow className="flex flex-col gap-4 p-6">
       <div className="flex flex-col gap-1">
-        <h3 className="text-lg font-semibold text-black dark:text-zinc-50">
-          {project.name}
-        </h3>
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-lg font-semibold text-black dark:text-zinc-50">
+            {project.name}
+          </h3>
+          {/* Badge lateral con la especialidad del proyecto (p. ej. "Móvil"). */}
+          <span className="theme-transition inline-flex shrink-0 items-center rounded-full border border-accent-from/30 bg-linear-to-r from-accent-from/10 to-accent-to/10 px-3 py-1 text-xs font-medium text-accent-from dark:text-accent-to">
+            {project.specialty[locale]}
+          </span>
+        </div>
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
           {project.role[locale]}
         </p>

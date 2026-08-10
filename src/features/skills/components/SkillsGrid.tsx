@@ -4,9 +4,9 @@ import { useLanguage } from "@/components/language/LanguageProvider";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { skills } from "../data/skills";
-import { SkillGroupCard } from "./SkillGroupCard";
+import { SkillCard } from "./SkillCard";
 
-export function SkillsSection() {
+export function SkillsGrid() {
   const { t } = useLanguage();
 
   return (
@@ -16,7 +16,7 @@ export function SkillsSection() {
         {skills.map((group) => (
           // Clave estable (es) independiente del idioma activo, para no
           // remontar la tarjeta al alternar ES/EN.
-          <SkillGroupCard key={group.category.es} group={group} />
+          <SkillCard key={group.category.es} group={group} />
         ))}
       </div>
     </Section>

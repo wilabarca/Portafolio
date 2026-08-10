@@ -9,7 +9,7 @@ import { LanguagesAndSoftSkills } from "@/features/education/components/Language
 import { ExperienceSection } from "@/features/experience/components/ExperienceSection";
 import { Hero } from "@/features/hero/components/Hero";
 import { ProjectsSection } from "@/features/projects/components/ProjectsSection";
-import { SkillsSection } from "@/features/skills/components/SkillsSection";
+import { SkillsGrid } from "@/features/skills/components/SkillsGrid";
 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
           <About />
         </Reveal>
         <Reveal>
-          <SkillsSection />
+          <SkillsGrid />
         </Reveal>
         <Reveal>
           <ProjectsSection />

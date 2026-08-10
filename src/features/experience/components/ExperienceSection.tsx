@@ -12,7 +12,7 @@ export function ExperienceSection() {
   return (
     <Section id="experiencia">
       <SectionHeading>{t.headings.experience}</SectionHeading>
-      <div className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {experience.map((item) => (
           // Clave estable (es) independiente del idioma activo.
           <ExperienceEntry key={item.title.es} item={item} />

@@ -32,6 +32,7 @@ export function ContactSection() {
             href={profile.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
+            title={`${profile.name} — LinkedIn`}
             className="inline-flex w-fit items-center gap-2 text-sm font-medium text-zinc-950 hover:underline dark:text-zinc-50"
           >
             <LinkedInIcon className="h-4 w-4" />

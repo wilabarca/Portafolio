@@ -36,6 +36,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t.linkedinButton.ariaLabel}
+                title={`${profile.name} — LinkedIn`}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border-subtle bg-surface-glass text-zinc-600 transition-colors hover:text-black dark:text-zinc-400 dark:hover:text-zinc-50"
               >
                 <LinkedInIcon className="h-4 w-4" />

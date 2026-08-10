@@ -17,14 +17,14 @@
   --accent-glow: rgb(99 102 241 / 0.35);
 }
 
-/* Paleta "cyberpunk elegante": índigo casi negro + acentos violeta/cian
-   luminosos, con superficies de vidrio muy oscuras para el efecto glass. */
+/* Paleta "cyberpunk elegante": tarjetas en tonos slate (bg-slate-900/60,
+   border-slate-800) con acentos violeta/cian luminosos para el efecto glass. */
 .dark {
   --background: #05040d;
   --foreground: #ededf3;
-  --surface: #0f0c1e;
-  --surface-glass: rgb(18 15 34 / 0.55);
-  --border-subtle: rgb(196 181 253 / 0.14);
+  --surface: #0f172a; /* slate-900 */
+  --surface-glass: rgb(15 23 42 / 0.6); /* slate-900/60 */
+  --border-subtle: rgb(30 41 59 / 0.8); /* slate-800 */
   --accent-from: #8b5cf6;
   --accent-to: #22d3ee;
   --accent-glow: rgb(139 92 246 / 0.45);

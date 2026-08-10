@@ -14,6 +14,7 @@ export const projects: Project[] = [
   {
     id: "explorachiapas",
     name: "ExploraChiapas",
+    specialty: { es: "Móvil", en: "Mobile" },
     role: {
       es: "Diseñador UI/UX & Desarrollador Móvil",
       en: "UI/UX Designer & Mobile Developer",
@@ -26,22 +27,23 @@ export const projects: Project[] = [
     stack: ["Flutter", "Dart", "Provider / BLoC", "REST API"],
     highlights: {
       es: [
-        "Diseño de prototipos UX/UI y sistema de componentes en Figma.",
-        "Arquitectura por features con separación de capas (Clean Architecture).",
-        "Gestión de estado con Provider / BLoC para flujos de exploración y búsqueda.",
-        "Consumo de servicios REST para catálogo de destinos y contenido regional.",
+        "Diseño de interfaz intuitiva enfocada en el usuario, validada con prototipos en Figma.",
+        "Arquitectura por features con separación de capas (Clean Architecture), pensada para escalar.",
+        "Integración con servicios web (REST) para el catálogo de destinos y contenido regional.",
+        "Gestión de estado con Provider / BLoC para los flujos de exploración y búsqueda.",
       ],
       en: [
-        "UX/UI prototyping and component system design in Figma.",
-        "Feature-based architecture with layered separation (Clean Architecture).",
+        "Intuitive, user-focused interface design, validated with Figma prototypes.",
+        "Feature-based architecture with layered separation (Clean Architecture), built to scale.",
+        "Web service (REST) integration for the destinations catalog and regional content.",
         "State management with Provider / BLoC for exploration and search flows.",
-        "REST service consumption for the destinations catalog and regional content.",
       ],
     },
   },
   {
     id: "monitoreo-medicamentos",
     name: "App de Monitoreo de Medicamentos",
+    specialty: { es: "Móvil", en: "Mobile" },
     role: {
       es: "Diseñador UI/UX & Desarrollador Móvil",
       en: "UI/UX Designer & Mobile Developer",
@@ -54,15 +56,15 @@ export const projects: Project[] = [
     stack: ["Kotlin", "Jetpack Compose", "Room Database", "StateFlow / Coroutines"],
     highlights: {
       es: [
-        "Diseño de interfaces en Jetpack Compose siguiendo lineamientos de Material Design.",
-        "Persistencia local de esquemas de medicación con Room Database.",
-        "Manejo de estado reactivo y asincronía con StateFlow y Coroutines.",
-        "Sistema de alertas y recordatorios en tiempo real para tratamientos.",
+        "Prototipado de interfaces en Figma siguiendo lineamientos de Material Design.",
+        "Gestión offline-first de los esquemas de medicación con Room Database.",
+        "Arquitectura modular por capas (MVVM + Clean Architecture).",
+        "Sistema de alertas y recordatorios en tiempo real para los tratamientos.",
       ],
       en: [
-        "UI design in Jetpack Compose following Material Design guidelines.",
-        "Local persistence of medication schedules with Room Database.",
-        "Reactive state and asynchrony handling with StateFlow and Coroutines.",
+        "UI prototyping in Figma following Material Design guidelines.",
+        "Offline-first management of medication schedules with Room Database.",
+        "Modular, layered architecture (MVVM + Clean Architecture).",
         "Real-time alerts and reminders system for treatments.",
       ],
     },
