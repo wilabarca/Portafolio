@@ -15,4 +15,6 @@ export const profile: Profile = {
   phone: "961 667 4443",
   location: "Suchiapa, Chiapas",
   linkedinUrl: "https://www.linkedin.com/in/wilver-abarca-sanchez-4749a33a2",
+  // Número mexicano (961 667 4443) con lada país (+52), formato requerido por wa.me.
+  whatsappUrl: "https://wa.me/529616674443",
 };

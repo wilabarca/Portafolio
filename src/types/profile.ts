@@ -16,6 +16,8 @@ export interface Profile {
   location: string;
   /** URL completa del perfil de LinkedIn. Si no se define, el botón/ícono correspondiente no se renderiza. */
   linkedinUrl?: string;
+  /** Enlace `wa.me` (WhatsApp) con el número en formato internacional. Si no se define, el ícono no se renderiza. */
+  whatsappUrl?: string;
 }
 
 export interface EducationItem {

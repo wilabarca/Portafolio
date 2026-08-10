@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/language/LanguageProvider";
+import { ContactLinks } from "@/features/contact/components/ContactLinks";
 import { profile } from "../data/profile";
 import { HeroAvatar } from "./HeroAvatar";
 
@@ -18,11 +19,7 @@ export function Hero() {
           {profile.name}
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-400">{profile.role[locale]}</p>
-        <div className="flex flex-wrap justify-center gap-4 pt-2 text-sm text-zinc-500 lg:justify-start dark:text-zinc-400">
-          <span>{profile.email}</span>
-          <span>{profile.phone}</span>
-          <span>{profile.location}</span>
-        </div>
+        <ContactLinks className="flex flex-wrap justify-center gap-4 pt-2 text-sm text-zinc-500 lg:justify-start dark:text-zinc-400" />
         <div className="flex flex-wrap justify-center gap-3 pt-4 lg:justify-start">
           <a
             href="#proyectos"

@@ -27,6 +27,7 @@ export interface Dictionary {
   contact: {
     intro: string;
     linkedin: string;
+    whatsapp: string;
   };
   projectCard: {
     repo: string;
@@ -76,6 +77,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       intro:
         "¿Interesado en colaborar o tienes una oportunidad para conversar? Escríbeme.",
       linkedin: "LinkedIn",
+      whatsapp: "Escribir por WhatsApp",
     },
     projectCard: {
       repo: "Repositorio",
@@ -123,6 +125,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       intro:
         "Interested in collaborating or have an opportunity to discuss? Reach out.",
       linkedin: "LinkedIn",
+      whatsapp: "Message on WhatsApp",
     },
     projectCard: {
       repo: "Repository",
