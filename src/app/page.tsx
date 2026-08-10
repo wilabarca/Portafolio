@@ -3,9 +3,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { TechnologyIcons } from "@/components/tech/TechnologyIcons";
 import { Reveal } from "@/components/ui/Reveal";
 import { About } from "@/features/about/components/About";
-import { ContactSection } from "@/features/contact/components/ContactSection";
-import { EducationSection } from "@/features/education/components/EducationSection";
-import { LanguagesAndSoftSkills } from "@/features/education/components/LanguagesAndSoftSkills";
+import { ContactCard } from "@/features/contact/components/ContactCard";
+import { EducationCard } from "@/features/education/components/EducationCard";
+import { LanguagesCard } from "@/features/education/components/LanguagesCard";
+import { SoftSkillsCard } from "@/features/education/components/SoftSkillsCard";
 import { ExperienceSection } from "@/features/experience/components/ExperienceSection";
 import { Hero } from "@/features/hero/components/Hero";
 import { ProjectsSection } from "@/features/projects/components/ProjectsSection";
@@ -42,15 +43,23 @@ export default function Home() {
         <Reveal>
           <ExperienceSection />
         </Reveal>
-        <Reveal>
-          <EducationSection />
-        </Reveal>
-        <Reveal>
-          <LanguagesAndSoftSkills />
-        </Reveal>
-        <Reveal>
-          <ContactSection />
-        </Reveal>
+        {/* Bento grid compacto: Educación, Idiomas, Habilidades Blandas + banner de Contacto. */}
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <Reveal delay={0} className="h-full">
+              <EducationCard />
+            </Reveal>
+            <Reveal delay={0.08} className="h-full">
+              <LanguagesCard />
+            </Reveal>
+            <Reveal delay={0.16} className="h-full sm:col-span-2 lg:col-span-1">
+              <SoftSkillsCard />
+            </Reveal>
+          </div>
+          <Reveal delay={0.24}>
+            <ContactCard />
+          </Reveal>
+        </div>
       </main>
       <Footer />
     </div>
