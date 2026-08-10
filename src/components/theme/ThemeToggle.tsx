@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/components/language/LanguageProvider";
 import { MoonIcon } from "@/components/icons/MoonIcon";
 import { SunIcon } from "@/components/icons/SunIcon";
 import { useHasMounted } from "@/lib/use-has-mounted";
@@ -9,6 +10,7 @@ import { useHasMounted } from "@/lib/use-has-mounted";
 /** Selector Dark/Light con microinteracción de rotación al alternar. */
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
+  const { t } = useLanguage();
   // Evita el mismatch de hidratación: el tema resuelto solo se conoce en cliente.
   const mounted = useHasMounted();
 
@@ -18,7 +20,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label={isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
+      aria-label={isDark ? t.themeToggle.toLight : t.themeToggle.toDark}
       className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-border-subtle bg-surface-glass text-zinc-600 transition-colors hover:text-black dark:text-zinc-400 dark:hover:text-zinc-50"
     >
       <AnimatePresence mode="wait" initial={false}>

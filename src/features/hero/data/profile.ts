@@ -3,12 +3,16 @@ import type { Profile } from "@/types";
 /** Fuente de datos centralizada del perfil, reutilizada por Hero, Navbar y Contact. */
 export const profile: Profile = {
   name: "Wilver Abarca Sánchez",
-  title: "Ingeniero en Software",
-  role: "Diseñador UI/UX & Desarrollador Full-Stack / Móvil",
+  title: {
+    es: "Ingeniero en Software",
+    en: "Software Engineer",
+  },
+  role: {
+    es: "Diseñador UI/UX & Desarrollador Full-Stack / Móvil",
+    en: "UI/UX Designer & Full-Stack / Mobile Developer",
+  },
   email: "wilverabarcasanchez9@gmail.com",
   phone: "961 667 4443",
   location: "Suchiapa, Chiapas",
-  // TODO: reemplazar con la URL real del perfil de LinkedIn.
-  // Mientras esté vacío, el botón de LinkedIn no se muestra.
-  linkedinUrl: undefined,
+  linkedinUrl: "https://www.linkedin.com/in/wilver-abarca-sanchez-4749a33a2",
 };

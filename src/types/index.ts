@@ -8,3 +8,4 @@ export type {
   LanguageItem,
 } from "./profile";
 export type { Technology, TechCategory } from "./technology";
+export type { Locale, Localized } from "./locale";

@@ -1,19 +1,24 @@
+"use client";
+
+import { useLanguage } from "@/components/language/LanguageProvider";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { technologies } from "./technologies.data";
 
 /**
  * Carrusel infinito (marquee) del stack tecnológico con íconos oficiales de
- * marca (react-icons/si). Puramente CSS: se pausa en hover y no requiere
- * JavaScript en cliente.
+ * marca (react-icons/si). El desplazamiento es puramente CSS (se pausa en
+ * hover); el componente es cliente solo para leer el idioma activo del
+ * encabezado.
  */
 export function TechnologyIcons() {
+  const { t } = useLanguage();
   // Se duplica la lista para lograr un loop continuo sin salto visible.
   const track = [...technologies, ...technologies];
 
   return (
     <Section id="stack">
-      <SectionHeading>Stack Tecnológico</SectionHeading>
+      <SectionHeading>{t.headings.stack}</SectionHeading>
       <div className="group relative overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-background to-transparent" />

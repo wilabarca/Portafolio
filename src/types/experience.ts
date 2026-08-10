@@ -1,6 +1,9 @@
+import type { Localized } from "./locale";
+
 export interface ExperienceItem {
-  title: string;
-  role: string;
+  title: Localized;
+  role: Localized;
+  /** Tecnologías del stack: no se traducen. */
   stack: string;
-  bullets: string[];
+  bullets: Localized<string[]>;
 }

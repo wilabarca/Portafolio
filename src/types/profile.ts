@@ -1,14 +1,16 @@
+import type { Localized } from "./locale";
+
 export interface NavLink {
   href: string;
-  label: string;
+  label: Localized;
 }
 
 export interface Profile {
   name: string;
-  /** Titulación profesional (p. ej. "Ingeniero en Software"). */
-  title: string;
-  /** Rol / especialidad mostrada bajo el título (p. ej. "Diseñador UI/UX & Desarrollador Full-Stack / Móvil"). */
-  role: string;
+  /** Titulación profesional (p. ej. "Ingeniero en Software" / "Software Engineer"). */
+  title: Localized;
+  /** Rol / especialidad mostrada bajo el título. */
+  role: Localized;
   email: string;
   phone: string;
   location: string;
@@ -17,11 +19,12 @@ export interface Profile {
 }
 
 export interface EducationItem {
+  /** Nombre de la institución: no se traduce (nombre propio). */
   institution: string;
-  program: string;
+  program: Localized;
 }
 
 export interface LanguageItem {
-  name: string;
-  level: string;
+  name: Localized;
+  level: Localized;
 }

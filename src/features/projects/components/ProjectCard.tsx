@@ -1,7 +1,10 @@
+"use client";
+
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { ExternalLinkIcon } from "@/components/icons/ExternalLinkIcon";
 import { GithubIcon } from "@/components/icons/GithubIcon";
+import { useLanguage } from "@/components/language/LanguageProvider";
 import type { Project } from "@/types";
 import { ArchitectureBadge } from "./ArchitectureBadge";
 
@@ -10,6 +13,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { locale, t } = useLanguage();
   const hasLinks = project.links?.repoUrl || project.links?.demoUrl;
 
   return (
@@ -19,18 +23,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.name}
         </h3>
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-          {project.role}
+          {project.role[locale]}
         </p>
       </div>
 
       <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-        {project.description}
+        {project.description[locale]}
       </p>
 
       <ArchitectureBadge architecture={project.architecture} />
 
       <ul className="list-disc space-y-1 pl-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-        {project.highlights.map((highlight) => (
+        {project.highlights[locale].map((highlight) => (
           <li key={highlight}>{highlight}</li>
         ))}
       </ul>
@@ -51,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="inline-flex items-center gap-1.5 text-zinc-950 hover:underline dark:text-zinc-50"
             >
               <GithubIcon className="h-4 w-4" />
-              Repositorio
+              {t.projectCard.repo}
             </a>
           )}
           {project.links?.demoUrl && (
@@ -62,7 +66,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="inline-flex items-center gap-1.5 text-zinc-950 hover:underline dark:text-zinc-50"
             >
               <ExternalLinkIcon className="h-4 w-4" />
-              Demo
+              {t.projectCard.demo}
             </a>
           )}
         </div>
